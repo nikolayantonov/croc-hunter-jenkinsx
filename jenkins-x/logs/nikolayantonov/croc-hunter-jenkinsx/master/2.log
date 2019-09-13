@@ -1,0 +1,132 @@
+
+Showing logs for build [32mnikolayantonov-croc-hunter-jenk-bz2r9-2[0m stage [32mmeta-pipeline[0m and container [32mstep-credential-initializer-bg4dm[0m
+{"level":"warn","ts":1568384279.124901,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568384279.125513,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mnikolayantonov-croc-hunter-jenk-bz2r9-2[0m stage [32mmeta-pipeline[0m and container [32mstep-working-dir-initializer-6s8bf[0m
+{"level":"warn","ts":1568384280.105899,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1568384280.107385,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32mnikolayantonov-croc-hunter-jenk-bz2r9-2[0m stage [32mmeta-pipeline[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mnikolayantonov-croc-hunter-jenk-bz2r9-2[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-nikolayantonov-croc-hunter-qz6zm[0m
+{"level":"warn","ts":1568384284.1806908,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568384284.4488444,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/**************/croc-hunter-jenkinsx.git @ 16ec1f6ad8e549557ac6013ad998c5c428aa0ee9 in path /workspace/source"}
+
+Showing logs for build [32mnikolayantonov-croc-hunter-jenk-bz2r9-2[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:16ec1f6ad8e549557ac6013ad998c5c428aa0ee9
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mnikolayantonov-croc-hunter-jenk-bz2r9-2[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
+SKIP merge-pull-refs: Nothing to merge
+
+Showing logs for build [32mnikolayantonov-croc-hunter-jenk-bz2r9-2[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
+Deleting and cloning the Jenkins X versions repo
+Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions
+Effective pipeline written to jenkins-x-effective.yml
+
+Showing logs for build [32mnikolayantonov-croc-hunter-jenk-bz2r9-2[0m stage [32mmeta-pipeline[0m and container [32mstep-create-tekton-crds[0m
+running command: echo \$(**-release-version) > VERSION
+
+running command: ** step tag --version \$(cat VERSION)
+Updating chart version in charts/croc-hunter-jenkinsx/Chart.yaml to 0.0.66
+Updating repository in charts/croc-hunter-jenkinsx/values.yaml to 955135126607.dkr.ecr.us-west-2.amazonaws.com/**************/croc-hunter-jenkinsx
+Updating tag in charts/croc-hunter-jenkinsx/values.yaml to 0.0.66
+Tag v0.0.66 created and pushed to remote origin
+
+WARNING: failed to find secret kaniko-secret in namespace **: secrets "kaniko-secret" not found
+PipelineActivity for **************-croc-hunter-jenkinsx-master-2
+Applying changes 
+upserted PipelineResource **************-croc-hunter-jenk for the git repository https://github.com/**************/croc-hunter-jenkinsx.git
+upserted Task **************-croc-hunter-jenk-bz2r9-from-build-pack-2
+upserted Pipeline **************-croc-hunter-jenk-bz2r9-2
+created PipelineRun **************-croc-hunter-jenk-bz2r9-2
+created PipelineStructure **************-croc-hunter-jenk-bz2r9-2
+
+Showing logs for build [32mnikolayantonov-croc-hunter-jenk-bz2r9-2[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-7ln92[0m
+{"level":"warn","ts":1568384293.907693,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568384293.9082847,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mnikolayantonov-croc-hunter-jenk-bz2r9-2[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-r7v72[0m
+{"level":"warn","ts":1568384294.8847308,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1568384294.8860312,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source /workspace/source/charts/croc-hunter-jenkinsx\""}
+
+Showing logs for build [32mnikolayantonov-croc-hunter-jenk-bz2r9-2[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mnikolayantonov-croc-hunter-jenk-bz2r9-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-nikolayantonov-croc-hunter-jenk-vdz7z[0m
+{"level":"warn","ts":1568384301.9582462,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568384302.1865673,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/**************/croc-hunter-jenkinsx.git @ v0.0.66 in path /workspace/source"}
+
+Showing logs for build [32mnikolayantonov-croc-hunter-jenk-bz2r9-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:16ec1f6ad8e549557ac6013ad998c5c428aa0ee9
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mnikolayantonov-croc-hunter-jenk-bz2r9-2[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mnikolayantonov-croc-hunter-jenk-bz2r9-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-make-build[0m
+echo "{ \"release\": \"0.0.66\"," > config.json
+echo "  \"commit\": \"47c0f8b5277ed10717884603b6270b9d20bb5b3c\"," >> config.json
+echo "  \"powered\": \"Jenkins X\" }" >> config.json
+CGO_ENABLED=0 GO15VENDOREXPERIMENT=1 go build -ldflags '' -o bin/croc-hunter-jenkinsx croc-hunter.go
+
+Showing logs for build [32mnikolayantonov-croc-hunter-jenk-bz2r9-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] No base image, nothing to extract            
+[36mINFO[0m[0000] cmd: EXPOSE                                  
+[36mINFO[0m[0000] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0000] Using files from context: [/workspace/source/config.json] 
+[36mINFO[0m[0000] Using files from context: [/workspace/source/bin] 
+[36mINFO[0m[0000] Using files from context: [/workspace/source/static] 
+[36mINFO[0m[0000] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0000] Taking snapshot of full filesystem...        
+[36mINFO[0m[0000] EXPOSE 8080                                  
+[36mINFO[0m[0000] cmd: EXPOSE                                  
+[36mINFO[0m[0000] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0000] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0000] ENTRYPOINT ["/croc-hunter-jenkinsx"]         
+[36mINFO[0m[0000] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0000] Using files from context: [/workspace/source/config.json] 
+[36mINFO[0m[0000] COPY config.json /                           
+[36mINFO[0m[0000] Taking snapshot of files...                  
+[36mINFO[0m[0000] Using files from context: [/workspace/source/bin] 
+[36mINFO[0m[0000] COPY ./bin/ /                                
+[36mINFO[0m[0000] Taking snapshot of files...                  
+[36mINFO[0m[0000] Using files from context: [/workspace/source/static] 
+[36mINFO[0m[0000] COPY static/ static/                         
+[36mINFO[0m[0000] Taking snapshot of files...                  
+2019/09/13 14:18:29 pushed blob: sha256:9c95b0989d6d2b2dc8bde709f2eb390341dbac08a5d71e46baac11a7a586a884
+2019/09/13 14:18:29 pushed blob: sha256:a33811e02ee87a55e64990bb2b9d966a5f0a91ce183bafdcc273c32ca44aa7ae
+2019/09/13 14:18:29 pushed blob: sha256:7c96236409752647264f90818608a2237c7d26b44eeca9e0b25a5d643f896be6
+2019/09/13 14:18:30 pushed blob: sha256:aaac4d06fa1e2da55e0c626989712f9dd646ff3af336f7babe2b5330d8d27380
+2019/09/13 14:18:30 955135126607.dkr.ecr.us-west-2.amazonaws.com/**************/croc-hunter-jenkinsx:0.0.66: digest: sha256:9d4a5ef34c84d697b94b205cd81835ab76565efd08fc12b83a06d750a1079333 size: 751
+
+Showing logs for build [32mnikolayantonov-croc-hunter-jenk-bz2r9-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mnikolayantonov-croc-hunter-jenk-bz2r9-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/croc-hunter-jenkinsx to an unshallow repository
+Generating change log from git ref 5de2f7674dae907db3b9cf870b737f37d561fec9 => 47c0f8b5277ed10717884603b6270b9d20bb5b3c
+WARNING: No release found for **************/croc-hunter-jenkinsx and tag v0.0.66 so creating a new release
+Updated the release information at https://github.com/**************/croc-hunter-jenkinsx/releases/tag/v0.0.66
+generated: /workspace/source/charts/croc-hunter-jenkinsx/templates/release.yaml
+Created Release croc-hunter-jenkinsx-0-0-66 resource in namespace **
+Updating PipelineActivity **************-croc-hunter-jenkinsx-master-2 with version 0.0.66
+Updated PipelineActivities **************-croc-hunter-jenkinsx-master-2 with release notes URL: https://github.com/**************/croc-hunter-jenkinsx/releases/tag/v0.0.66
+
+Showing logs for build [32mnikolayantonov-croc-hunter-jenk-bz2r9-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file croc-hunter-jenkinsx-0.0.66.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32mnikolayantonov-croc-hunter-jenk-bz2r9-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+Promoting app croc-hunter-jenkinsx version 0.0.66 to namespace **-staging
+Created Pull Request: https://github.com/**************/environment-crowfair-staging/pull/2
+Pull Request https://github.com/**************/environment-crowfair-staging/pull/2 is merged at sha f3ccf63119091cce4cdab120a30df5a3e9be513f
+Pull Request merged but we are not waiting for the update pipeline to complete!
+WARNING: Could not find the service URL in namespace **-staging for names croc-hunter-jenkinsx, **-croc-hunter-jenkinsx, **-staging-croc-hunter-jenkinsx
